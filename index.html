@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Redirict</title>
+</head>
+
+<body>
+    <script> 
+        var urls = Array("file:///C:/Users/xnoah/Desktop/Redirect%20Abuser/index.html", "close");
+        var duration = Math.floor(Math.random() * 4001 + 1000);  
+        var destination = urls[Math.floor(Math.random() * urls.length)]
+        sleep(duration)
+        if (destination === 'close')
+        {
+            close();
+        } else {
+            window.location.assign(destination);
+        }
+        function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do { 
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
+    </script>
+    
+</body>
+
+</html>
