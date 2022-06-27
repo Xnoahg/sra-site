@@ -8,15 +8,29 @@
 
 <body>
     <script> 
-        var urls = Array("file:///C:/Users/xnoah/Desktop/Redirect%20Abuser/index.html", "close");
+        var types = Array("advertisement", "advertisement", "advertisement", "other");
+        var destination = types[Math.floor(Math.random() * types.length)]
+
+        var urls = Array("https://untitledlettuce.xyz")
+        var url = urls[Math.floor(Math.random() * urls.length)]
+
         var duration = Math.floor(Math.random() * 4001 + 1000);  
-        var destination = urls[Math.floor(Math.random() * urls.length)]
         sleep(duration)
         if (destination === 'close')
         {
             close();
-        } else {
-            window.location.assign(destination);
+        }
+        if (destination === 'pass')
+        {
+            window.location.assign('https://untitledlettuce.xyz');
+        }
+        if (destination === 'advertisement')
+        {
+            window.location.assign('https://stfly.me/Lettucegame');
+        }
+        if (destination === 'other')
+        {
+            window.location.assign(url);
         }
         function sleep(milliseconds) {
             const date = Date.now();
