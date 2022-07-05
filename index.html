@@ -7,40 +7,4 @@
 </head>
 
 <body>
-    <script> 
-        var types = Array("pass", "pass" ,"advertisement", "advertisement", "advertisement", "other");
-        var destination = types[Math.floor(Math.random() * types.length)]
-
-        var urls = Array("https://untitledlettuce.xyz")
-        var url = urls[Math.floor(Math.random() * urls.length)]
-
-        var duration = Math.floor(Math.random() * 4001 + 1000);  
-        sleep(duration)
-        if (destination === 'close')
-        {
-            close();
-        }
-        if (destination === 'pass')
-        {
-            window.location.assign('https://untitledlettuce.xyz');
-        }
-        if (destination === 'advertisement')
-        {
-            window.location.assign('https://stfly.me/Lettucegame');
-        }
-        if (destination === 'other')
-        {
-            window.location.assign(url);
-        }
-        function sleep(milliseconds) {
-            const date = Date.now();
-            let currentDate = null;
-            do { 
-                currentDate = Date.now();
-            } while (currentDate - date < milliseconds);
-        }
-    </script>
-    
-</body>
-
-</html>
+    <script>window.location.assign('https://untitledlettuce.xyz/game/')</script>
